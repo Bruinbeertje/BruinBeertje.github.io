@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f7f6;
+    color: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #0056b3; /* de kleur van de links */
+    font-weight: bold;
+}
