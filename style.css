@@ -14,3 +14,20 @@ nav a {
     color: #0056b3; /* de kleur van de links */
     font-weight: bold;
 }
+@media (max-width: 1024px) { /* dit is vergelijkbaar met een if statement, width van de device is dus 1024px of kleiner */
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Zet de linkjes onder elkaar op mobiel */
+        align-items: center; /* Zet de linkjes in het midden */
+        gap: 10px; /* Iets minder ruimte tussen de linkjes op mobiel */
+    }
+    h1 {
+        font-size: 24px; /* Maak de titel wat kleiner zodat het op het scherm past */
+        text-align: center;
+    }
+}
