@@ -2,9 +2,10 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Mijn eerste webpagina</title>
+    <title>Boran — Portfolio</title>
+    <meta name="description" content="Portfoliosite van Boran: wie ik ben, mijn projecten en mijn blog.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +19,7 @@
            href="https://github.com/Bruinbeertje"
            aria-label="Github profile">
 
-            <img src="pfp.jpg" alt="I be poppin bottles meme" width="40" height="40">
+            <img src="images/pfp.jpg" alt="Profielfoto van Boran" width="40" height="40">
 
             <h1>Bruinbeertje</h1>
         </a>
@@ -44,15 +45,25 @@
 </header>
 
 <main>
-    <img
-        src="https://preview.redd.it/is-the-person-who-made-this-drawing-here-v0-jbarbvtdgdhe1.jpeg?auto=webp&s=6a4113860b14f7e7dee99527b26244e4f76d3909"
-        alt="Een afbeelding van een getekende Markiplier-meme"
-        width="142"
-        height="142"
-    >
+    <section class="hero">
+        <h2>Hoi, ik ben Boran</h2>
+        <p>Welkom op mijn portfoliosite. Hier vind je wie ik ben, waar ik aan werk en wat ik schrijf.</p>
 
-    <p>Dit is mijn eerste paragraaf.</p>
+        <nav aria-label="Snelkoppelingen">
+            <ul class="hero-links">
+                <li><a href="whoami.html">Wie ben ik &rarr;</a></li>
+                <li><a href="projects.html">Bekijk mijn projecten &rarr;</a></li>
+                <li><a href="blog.html">Lees mijn blog &rarr;</a></li>
+            </ul>
+        </nav>
+    </section>
 </main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Boran</p>
+    </div>
+</footer>
 
 </body>
 </html>

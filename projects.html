@@ -2,9 +2,10 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Mijn eerste webpagina</title>
+    <title>Projecten — Boran</title>
+    <meta name="description" content="Een overzicht van de projecten van Boran.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +19,7 @@
            href="https://github.com/Bruinbeertje"
            aria-label="Github profile">
 
-            <img src="pfp.jpg" alt="I be poppin bottles meme" width="40" height="40">
+            <img src="images/pfp.jpg" alt="Profielfoto van Boran" width="40" height="40">
 
             <h1>Bruinbeertje</h1>
         </a>
@@ -32,7 +33,7 @@
                     <a href="whoami.html">Who am I</a>
                 </li>
                 <li>
-                    <a aria-current="page"href="projects.html">Projects</a>
+                    <a aria-current="page" href="projects.html">Projects</a>
                 </li>
                 <li>
                     <a href="blog.html">Blog</a>
@@ -44,15 +45,42 @@
 </header>
 
 <main>
-    <img
-        src="https://preview.redd.it/is-the-person-who-made-this-drawing-here-v0-jbarbvtdgdhe1.jpeg?auto=webp&s=6a4113860b14f7e7dee99527b26244e4f76d3909"
-        alt="Een afbeelding van een getekende Markiplier-meme"
-        width="142"
-        height="142"
-    >
+    <section class="projects">
+        <h2>Projecten</h2>
 
-    <p>Dit is mijn eerste paragraaf.</p>
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3>Project 1: GSG(gebarenhandschoen)</h3>
+                <p>[Een handschoen speciaal gemaakt voor stomme mensen om eenvoudig te communiceren]</p>
+                <a href="#">Bekijk project</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Project 2: HotelSimulatie applicatie</h3>
+                <p>[Een simulatie-applicatie voor het simuleren van een hotellayout als doel om een effectieve hotelbeheer op te zetten]</p>
+                <a href="#">Bekijk project</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Project 3: whoami website</h3>
+                <p>[Mijn eerste website gemaakt in html en css]</p>
+                <a href="#">Bekijk project</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Project 4: bla blabla bliblu</h3>
+                <p>[gabagool how ya doin']</p>
+                <a href="#">Bekijk project</a>
+            </article>
+        </div>
+    </section>
 </main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Boran</p>
+    </div>
+</footer>
 
 </body>
 </html>
