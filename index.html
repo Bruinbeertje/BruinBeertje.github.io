@@ -46,12 +46,23 @@
 
 <main>
     <section class="hero">
-        <h2>Hoi, ik ben Boran</h2>
-        <p>Welkom op mijn portfoliosite. Hier vind je wie ik ben, waar ik aan werk en wat ik schrijf.</p>
+        <div class="about-intro">
+            <video class="about-photo" width="160" height="160" autoplay loop muted playsinline
+                   poster="images/tenor-poster.jpg" aria-label="Profielanimatie van Boran">
+                <source src="images/tenor.webm" type="video/webm">
+                <source src="images/tenor.mp4" type="video/mp4">
+                <img src="images/tenor-poster.jpg" alt="Profielfoto van Boran" width="160" height="160">
+            </video>
+            <div>
+                <h2>Hoi, ik ben Boran</h2>
+                <p class="hero-subtitle">Software Engineering student &middot; Haagse Hogeschool &middot; 3e semester</p>
+                <p>Welkom op mijn portfoliosite. Hier vind je wie ik ben, waar ik aan werk en wat ik schrijf.</p>
+                <a class="cta-button" href="whoami.html">Meer over mij &rarr;</a>
+            </div>
+        </div>
 
         <nav aria-label="Snelkoppelingen">
             <ul class="hero-links">
-                <li><a href="whoami.html">Wie ben ik &rarr;</a></li>
                 <li><a href="projects.html">Bekijk mijn projecten &rarr;</a></li>
                 <li><a href="blog.html">Lees mijn blog &rarr;</a></li>
             </ul>

@@ -201,25 +201,96 @@ main > img {
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Clearfix: zonder dit zakt de kaart in elkaar omdat .blog-image gefloat is */
+.blog-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .blog-card p,
 .blog-card h2 {
     position: relative;
     z-index: 2;
 }
+
+/* Leestijd-indicaat: laat een bezoeker die onderweg is in één oogopslag
+   zien of een post nu even past. Bron: MDN - Reading time patterns / web.dev - Content design. */
+.reading-time {
+    display: inline-block;
+    margin: -8px 0 14px;
+    font-size: 14px;
+    color: #6b6b6b;
+    max-width: none;
+}
+
+/* Inklapbare blogpost: native <details>/<summary>, geen JS nodig.
+   Zo kan iemand die onderweg is eerst alle titels + leestijden scannen
+   en alleen de post die hem interesseert openklappen.
+   Bron: MDN - The Details disclosure element. */
+.blog-card details summary {
+    display: inline-block;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    padding: 8px 18px;
+    border: 2px solid #581c87;
+    border-radius: 999px;
+
+    color: #581c87;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.blog-card details summary::-webkit-details-marker {
+    display: none;
+}
+
+.blog-card details summary::after {
+    content: " \25BE";
+}
+
+.blog-card details[open] summary::after {
+    content: " \25B4";
+}
+
+.blog-card details summary:hover {
+    background-color: #581c87;
+    color: white;
+}
+
+.blog-card details summary:focus-visible {
+    outline: 3px solid #00b7b7;
+    outline-offset: 2px;
+}
+
+.blog-card details[open] summary {
+    margin-bottom: 16px;
+}
+
+.blog-card details p:first-of-type {
+    margin-top: 0;
+}
+
 .blog-image {
     opacity: 0.8;
-      filter: 
-    drop-shadow(2px 0px 0px black)
-    drop-shadow(-2px 0px 0px black)
-    drop-shadow(0px 2px 0px black)
-    drop-shadow(0px -2px 0px black);
-    position: absolute;
+    filter:
+        drop-shadow(2px 0px 0px black)
+        drop-shadow(-2px 0px 0px black)
+        drop-shadow(0px 2px 0px black)
+        drop-shadow(0px -2px 0px black);
+    /* Was: position: absolute + top/right, waardoor de tekst er los overheen viel.
+       Nu: float, zodat de tekst er nette om heen loopt (MDN: CSS floats). */
+    float: right;
     height: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    max-width: 142px;
+    margin: 4px 0 15px 20px;
     transform: rotate(10deg);
-    top: 10px;
-    right: 20px; 
+    shape-outside: margin-box;
 }
 
 
@@ -227,6 +298,15 @@ main > img {
 
 .hero p {
     margin-bottom: 30px;
+}
+
+.hero .about-intro {
+    margin-bottom: 30px;
+}
+
+.hero-subtitle {
+    color: #882bda;
+    font-weight: bold;
 }
 
 .hero-links {
@@ -289,6 +369,30 @@ main > img {
 }
 
 
+/* CTA-knop: gericht op scenario A (recruiter). Duidelijk aanklikbaar in
+   plaats van een gewone tekstlink, zodat "contact opnemen" opvalt. */
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+
+    padding: 12px 24px;
+    border-radius: 999px;
+
+    background: linear-gradient(90deg, #581c87 0%, #882bda 100%);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 4px 10px rgba(88, 28, 135, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(88, 28, 135, 0.4);
+}
+
+
 /* PROJECTS */
 
 .projects-grid {
@@ -304,6 +408,11 @@ main > img {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects-cta {
+    margin-top: 30px;
+    font-weight: bold;
 }
 
 .project-card h3 {

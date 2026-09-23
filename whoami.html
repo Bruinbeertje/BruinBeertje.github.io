@@ -46,10 +46,19 @@
 
 <main>
     <section class="about-intro">
-        <img class="about-photo" src="images/tenor.gif" alt="Profielfoto van Boran" width="160" height="160">
+        <!-- Was een 7,5MB GIF (images/tenor.gif). Omgezet naar video: zelfde
+             animatie, ~260KB. Dat scheelt vooral op mobiel/onderweg data en laadtijd.
+             Bron: web.dev - Replace GIFs with video for faster page loads. -->
+        <video class="about-photo" width="160" height="160" autoplay loop muted playsinline
+               poster="images/tenor-poster.jpg" aria-label="Profielanimatie van Boran">
+            <source src="images/tenor.webm" type="video/webm">
+            <source src="images/tenor.mp4" type="video/mp4">
+            <img src="images/tenor-poster.jpg" alt="Profielfoto van Boran" width="160" height="160">
+        </video>
         <div>
             <h2>Wie ben ik</h2>
             <p>Ik ben Boran, een student op de Haagse Hogeschool. Ik studeer software engineering, en zit in het 3de semester. Mijn interesses zijn programmeren, gamen en ontwerpen.</p>
+            <a class="cta-button" href="#contact">Neem contact met mij op &rarr;</a>
         </div>
     </section>
 
@@ -62,7 +71,7 @@
         </ul>
     </section>
 
-    <section class="about-contact">
+    <section class="about-contact" id="contact">
         <h2>Contact</h2>
         <ul>
             <li><a href="mailto:BruinBeertje@Fake.com">BruinBeertje@Fake.com</a></li>
